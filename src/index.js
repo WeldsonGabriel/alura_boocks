@@ -1,9 +1,20 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
-import { createGlobalStyle } from 'styled-components'; 
+import React from "react";
+import ReactDOM from "react-dom/client";
+import App from "./App";
+import reportWebVitals from "./reportWebVitals";
+import { createGlobalStyle } from "styled-components";
+import styled from "styled-components"
 
+
+export const Titulo = styled.h2`
+   width: 100%;
+   padding: 30px 0;
+   background-color: #FFF;
+   color: ${props => props.cor || '#000'};
+   font-size: ${props => props.tamanhoFonte || '18px;'};
+   text-align: ${props => props.alinhamento || 'center'};
+   margin: 0;
+`
 const GlobalStyle = createGlobalStyle`
   body {
     margin: 0;
@@ -21,9 +32,9 @@ const GlobalStyle = createGlobalStyle`
   li {
     list-style: none;
   }
-`
+`;
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <GlobalStyle />
